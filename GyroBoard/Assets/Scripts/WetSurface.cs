@@ -19,7 +19,7 @@ public class WetSurface : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
-        rb.AddForce(rb.velocity * 3);
+        rb.AddForce(rb.velocity * 2);
         print("Water");
     }
 }

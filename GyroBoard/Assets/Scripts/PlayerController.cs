@@ -21,7 +21,11 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-		rb.AddForce (movement * speed);
+        movement = Camera.main.transform.TransformDirection(movement);
+        movement.y = 0;
+        Vector3 force = movement.normalized * speed;
+
+        rb.AddForce (movement * speed);
 	}
 
 }

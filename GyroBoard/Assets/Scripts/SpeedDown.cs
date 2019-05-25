@@ -19,7 +19,7 @@ public class SpeedDown : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
-        rb.AddForce(-rb.velocity*5);
+        rb.AddForce(-rb.velocity*4);
         print("Sand");
     }
 }

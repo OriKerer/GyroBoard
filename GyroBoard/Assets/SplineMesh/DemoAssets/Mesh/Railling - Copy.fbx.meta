@@ -1,106 +1,14 @@
 fileFormatVersion: 2
-guid: 75a08385e127b9944b8a9e21320e8b88
+guid: eec26fc33f6e0fe4dbf96711b47aaa2a
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Cube
-  - first:
-      1: 100002
-    second: Cube.001
-  - first:
-      1: 100004
-    second: Cube.002
-  - first:
-      1: 100006
-    second: Cube.003
-  - first:
-      1: 100008
-    second: Cylinder
-  - first:
-      1: 100010
-    second: //RootNode
-  - first:
-      4: 400000
-    second: Cube
-  - first:
-      4: 400002
-    second: Cube.001
-  - first:
-      4: 400004
-    second: Cube.002
-  - first:
-      4: 400006
-    second: Cube.003
-  - first:
-      4: 400008
-    second: Cylinder
-  - first:
-      4: 400010
-    second: //RootNode
-  - first:
-      23: 2300000
-    second: Cube
-  - first:
-      23: 2300002
-    second: Cube.001
-  - first:
-      23: 2300004
-    second: Cube.002
-  - first:
-      23: 2300006
-    second: Cube.003
-  - first:
-      23: 2300008
-    second: Cylinder
-  - first:
-      23: 2300010
-    second: //RootNode
-  - first:
-      33: 3300000
-    second: Cube
-  - first:
-      33: 3300002
-    second: Cube.001
-  - first:
-      33: 3300004
-    second: Cube.002
-  - first:
-      33: 3300006
-    second: Cube.003
-  - first:
-      33: 3300008
-    second: Cylinder
-  - first:
-      33: 3300010
-    second: //RootNode
-  - first:
-      43: 4300000
-    second: Cube
-  - first:
-      43: 4300002
-    second: Cylinder
-  - first:
-      43: 4300004
-    second: Cube.001
-  - first:
-      43: 4300006
-    second: Cube.002
-  - first:
-      43: 4300008
-    second: Cube.003
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 684e38a396e0e4a47b7d8888e140e426, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -123,10 +31,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 7
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -135,7 +43,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -172,7 +80,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 7
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

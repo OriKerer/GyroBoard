@@ -68,6 +68,23 @@ public class PlayerController : MonoBehaviour {
         Vector3 force = movement.normalized * speed;
 
         rb.AddForce (movement * speed);
+
+        var tempVec = rb.velocity;
+        for (int i = 0; i < 3; i++)
+        {
+            if (tempVec[i] > 10)
+            {
+                tempVec[i] = 10;
+            }
+            else if(tempVec[i] < -10)
+            {
+                tempVec[i] = -10;
+            }
+        }
+
+        rb.velocity = tempVec;
+
+        print(rb.velocity.ToString());
 	}
 
     Vector3 ReadAxisFromBTDevice()

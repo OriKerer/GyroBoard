@@ -19,9 +19,8 @@ public class Speedup : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Vector3 v3 = new Vector3(10, 10, 10);
-        v3 = Camera.main.transform.TransformDirection(v3);
         v3.z = 0;
-        other.gameObject.GetComponent<Rigidbody>().AddForce(v3);
+        other.gameObject.GetComponent<Rigidbody>().AddForce(v3*3);
         print("speedup");
     }
 }

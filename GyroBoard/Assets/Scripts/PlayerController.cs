@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
+
 using System.Collections;
 
 using TechTweaking.Bluetooth;
+using System;
 
 public static class ExtensionMethods
 {
@@ -76,7 +79,6 @@ public class PlayerController : MonoBehaviour {
 
             if (msg != null && msg.Length > 0)
             {
-                debugText.text = "Data Is real"; // print to debug text
                 string content = System.Text.ASCIIEncoding.ASCII.GetString(msg);
                 //debugText.text = content; // print to debug text
                 var splitContent = content.Split(',');
@@ -95,14 +97,31 @@ public class PlayerController : MonoBehaviour {
         debugText.text = vec.ToString();
         Vector3 center = new Vector3(0, 750 ,-1500);
         vec -= center;
+
+        for(int i = 0; i < 3; i++)
+        {
+            if( Math.Abs(vec[i]) < 750)
+            {
+                vec[i] = 0;
+            }
+        }
+
         vec.x = Remap(vec.y, -5000, 5000, -1, 1);
         vec.z = Remap(vec.z, -5000, 5000, -1, 1);
         vec.y = 0;
-        debugText.text = " | " + vec.ToString();
+        debugText.text += " | " + vec.ToString();
     }
 
     public static float Remap(float value, float fromSource, float toSource, float fromTarget, float toTarget)
     {
-        return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+        if(value < fromSource)
+        {
+            value = fromSource;
+        }
+        else if (value > toSource)
+        {
+            value = toSource;
+        }
+        return value / toSource;
     }
 }

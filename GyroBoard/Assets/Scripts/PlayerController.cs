@@ -58,11 +58,12 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        movement = Camera.main.transform.TransformDirection(movement);
+
 #else
         Vector3 movement = ReadAxisFromBTDevice();
         NormelizeMovment(ref movement);
 #endif
-        movement = Camera.main.transform.TransformDirection(movement);
         movement.y = 0;
         Vector3 force = movement.normalized * speed;
 

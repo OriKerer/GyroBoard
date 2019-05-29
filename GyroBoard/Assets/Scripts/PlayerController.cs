@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		rb = GetComponent<Rigidbody>();
 
-        debugText = GameObject.Find("DebugText").GetComponent<Text>();
+        //debugText = GameObject.Find("DebugText").GetComponent<Text>();
 
         BluetoothAdapter.enableBluetooth(); // Force Enabling Bluetooth
         device = new BluetoothDevice();
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
         */
         device.setEndByte((byte)';');
         device.connect();
-        debugText.text = "Unreal is better";
+        //debugText.text = "Unreal is better";
     }
 
 
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 
 
 #if UNITY_EDITOR
-        debugText.text = "unityEditor";
+       // debugText.text = "unityEditor";
         float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 
     void NormelizeMovment(ref Vector3 vec)
     {
-        debugText.text = vec.ToString();
+       // debugText.text = vec.ToString();
         Vector3 center = new Vector3(0, 750 ,-1500);
         vec -= center;
 
@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour {
         vec.x = Remap(vec.y, -5000, 5000, -1, 1);
         vec.z = Remap(vec.z, -5000, 5000, -1, 1);
         vec.y = 0;
-        debugText.text += " | " + vec.ToString();
+        //debugText.text += " | " + vec.ToString();
     }
 
     public static float Remap(float value, float fromSource, float toSource, float fromTarget, float toTarget)
